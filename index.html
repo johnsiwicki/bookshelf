@@ -6,13 +6,31 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
-          <link rel="stylesheet" href="main.css">
-           <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="main.css">
+                  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+                  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+                  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+          <script>
+              $(function() {
+              $( document ).tooltip();
+            });
+            </script>
     </head>
     <body>
 
 <div class="wrapper">
+ 
+<div class="book">
+  <ul id="books">
+  </ul>
 
+</div>
+ 
+
+<div class="shelf"></div>
+
+
+</div>
 <script>
 // Set the api variable
 var googleAPI = "https://www.googleapis.com/books/v1/volumes?q=harry+potter";
@@ -30,19 +48,15 @@ $.getJSON(googleAPI, function (response) {
         var item = response.items[i];
 
         // Set the book title in the div
-        document.getElementById("books").innerHTML += "<img src=\"" + item.volumeInfo.imageLinks.thumbnail + "\" >"; 
+        document.getElementById("books").innerHTML += "<li><a class=\"hastip\" title=\"" + item.volumeInfo.title + "\n"+ item.volumeInfo.authors +"\"><img src=\"" + item.volumeInfo.imageLinks.thumbnail + "\" alt=\"" + item.volumeInfo.title + "\" ></a></li>"; 
       }
 });
-</script>
 
-<div id="books">
-</div>
  
 
-<div class="shelf"></div>
+</script>
+ 
 
-
-</div>
 
 
    </body>
