@@ -3,6 +3,9 @@ margin: 0;
 padding: 0;
 }
 
+button {
+    display: block;
+}
 .wrapper {
     margin: 25px auto;
 
@@ -17,6 +20,10 @@ padding: 0;
     list-style: none;
 }
 
+#books li {
+    float: left;
+    width: 148px;
+}
 
 #books img {
     border: solid 1px #ccc;
@@ -52,4 +59,12 @@ box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.7);
     color: #303030;
     background-color: green;
     border: 1px solid black;
+}
+
+
+#button {
+    display: inline-block;
+    padding: 5px;
+    background: #CCC;
+    cursor: pointer;
 }
