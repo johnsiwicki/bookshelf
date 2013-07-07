@@ -7,14 +7,14 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" href="main.css">
-                  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-                  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-                  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+   <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+   <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
           <script>
               $(function() {
               $( document ).tooltip();
             });
-            </script>
+          </script>
     </head>
     <body>
 
@@ -23,7 +23,6 @@
 <div class="book">
   <ul id="books">
   </ul>
-
 </div>
  
 
@@ -31,33 +30,7 @@
 
 
 </div>
-<script>
-// Set the api variable
-var googleAPI = "https://www.googleapis.com/books/v1/volumes?q=harry+potter";
 
-// Make a ajax call to get the json data as response.
-$.getJSON(googleAPI, function (response) {
-
-    // In console, you can see the response objects
-    console.log("JSON Data: " + response.items);
-
-    // Loop through all the items one-by-one
-    for (var i = 0; i < response.items.length; i++) {
-
-        // set the item from the response object
-        var item = response.items[i];
-
-        // Set the book title in the div
-        document.getElementById("books").innerHTML += "<li><a class=\"hastip\" title=\"" + item.volumeInfo.title + "\n"+ item.volumeInfo.authors +"\"><img src=\"" + item.volumeInfo.imageLinks.thumbnail + "\" alt=\"" + item.volumeInfo.title + "\" ></a></li>"; 
-      }
-});
-
- 
-
-</script>
- 
-
-
-
+   <script src="main.js"></script>
    </body>
 </html>
