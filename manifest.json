@@ -1,0 +1,17 @@
+{
+  "name": "BookShelf",
+  "description": "My first packaged app.",
+  "version": "0.1",
+  "app": {
+    "background": {
+      "scripts": ["background.js"]
+    }
+  },
+
+  "sandbox": {
+  "pages": ["index.html"]
+},
+
+  "icons": { "16": "calculator-16.png", "128": "calculator-128.png" }
+}
+

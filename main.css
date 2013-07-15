@@ -68,6 +68,10 @@ height: 60px;
   margin: 10px;
 }
 
+.fullbook span:hover {
+  cursor: pointer;
+}
+
 .search-box {
     padding-top:5px;
     float:right;
